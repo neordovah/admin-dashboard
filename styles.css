@@ -1,6 +1,6 @@
-html {
+html, body {
     min-height: 100vh;
-    width: 100vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -13,9 +13,11 @@ html {
 .container {
     display: grid;
     grid-template-columns: 0.75fr 2.3fr 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     min-height: 100vh;
+    position: relative;
 }
+
 
 .header {
     background-color: pink;
@@ -28,24 +30,31 @@ html {
 .top-header-side {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    padding: 10px 20px;
 }
 
 #search-bar {
     background-color: white;
     border-radius: 20px;
-    height: 50%;
+    height: 80%;
     align-self: center;
 }
 
 .profile-small > img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
 .profile-small {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-small > p {
+    font-weight: bold;
 }
 
 .header-buttons {
@@ -53,7 +62,6 @@ html {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 10px;
-    padding: 10px 20px;
 }
 
 .header-button {
@@ -62,8 +70,8 @@ html {
     margin: 0;
     background-color: aqua;
     color: white;
-    border-radius: 8px;
-    height: 50%;
+    border-radius: 20px;
+    height: 30%;
     align-self: center;
     justify-content: center;
 }
@@ -71,6 +79,7 @@ html {
 .bottom-header-side {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    padding: 10px 20px;
 }
 
 .greeting > img {
@@ -82,6 +91,16 @@ html {
 .greeting {
     display: flex;
     align-items: center;
+    gap: 20px;
+}
+
+.greeting-text > p:first-child {
+    font-size: 18px;
+}
+
+.greeting-text > p:last-child {
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .sidebar {
@@ -91,18 +110,31 @@ html {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    color: white;
 }
 
-#options1 {
+.logo > h1 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.options1, .options2 {
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 5px lightgray;
 }
 
-#options2 {
-    display: flex;
-    flex-direction: column;
+.options1 > p:hover, .options2 > p:hover {
+    border-bottom: 2px solid black;
 }
 
+.article > p:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
 
 .articles {
     display: grid;
@@ -120,6 +152,8 @@ html {
     flex-direction: column;
     border-radius: 20px;
     padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .right-side {
@@ -128,21 +162,33 @@ html {
     grid-template-rows: 1fr 1fr;
 }
 
-.announcements {
+.latest-recipes {
     border-radius: 12px;
     background-color: white;
     margin: 20px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 32px;
+    padding: 12px 32px;
 }
 
-.news {
+.recipe {
     border-bottom: solid 1px gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0 0 0;
 }
 
-.news:last-child {
+.recipe:last-child {
     border-bottom: none;
+}
+
+.recipe > p:first-child{
+    font-weight: bold;
+}
+
+.recipe > p:last-child{
+    font-size: 14px;
 }
 
 .trending {
@@ -151,14 +197,33 @@ html {
     margin: 20px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 32px;
+    padding: 12px 32px;
 }
 
 .trending-element {
     border-bottom: solid 1px gray;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0 0 0;
 }
 
 .trending-element:last-child {
     border-bottom: none;
 }
 
+.trending-element > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.article-bar > img {
+    height: 25px;
+}
+
+.article-bar {
+    align-self: end;
+    gap: 10px;
+    display: flex;
+}
