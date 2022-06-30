@@ -15,12 +15,12 @@ html, body {
     grid-template-columns: 0.75fr 2.3fr 1fr;
     grid-template-rows: 1fr 5fr;
     min-height: 100vh;
-    position: relative;
+    justify-content: end;
 }
 
 
 .header {
-    background-color: pink;
+    background-color: #b6b6b6;
     grid-column: 2 / 4;
     height: 100%;
     display: grid;
@@ -31,6 +31,7 @@ html, body {
     display: grid;
     grid-template-columns: 3fr 2fr;
     padding: 10px 20px;
+    padding-bottom: 0;
 }
 
 #search-bar {
@@ -68,7 +69,7 @@ html, body {
     padding: 8px;
     border: none;
     margin: 0;
-    background-color: aqua;
+    background-color: #292524;
     color: white;
     border-radius: 20px;
     height: 30%;
@@ -80,6 +81,7 @@ html, body {
     display: grid;
     grid-template-columns: 3fr 2fr;
     padding: 10px 20px;
+    padding-top: 0;
 }
 
 .greeting > img {
@@ -105,7 +107,7 @@ html, body {
 
 .sidebar {
     grid-row: 1 / 3;
-    background-color: green;
+    background-color: #292524;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -142,11 +144,11 @@ html, body {
     grid-auto-rows: 1fr;
     gap: 20px;
     padding: 20px;
-    background-color: gray;
+    background-color:  #e7e5e4;
 }
 
 .article {
-    background-color: yellow;
+    background-color: white;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -157,9 +159,9 @@ html, body {
 }
 
 .right-side {
-    background-color: red;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    background-color: #e7e5e4;
 }
 
 .latest-recipes {
@@ -172,7 +174,7 @@ html, body {
 }
 
 .recipe {
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px  #e7e5e4;
     display: flex;
     flex-direction: column;
     gap: 10px;
